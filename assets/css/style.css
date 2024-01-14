@@ -1,0 +1,190 @@
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.footer {
+  grid-area: footer;
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "header"
+    "sidebar"
+    "main"
+    "footer";
+   
+    
+}
+
+.box {
+  
+  border-radius: 1.6rem;
+  box-shadow: 0rem 0.4rem 3rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  margin: 10px;
+  background-color: rgb(214, 210, 210);
+
+}
+
+.main_box {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 15px;
+  flex-direction: column;
+
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border: solid 1px black;
+  border-radius: 1.6rem;
+  box-shadow: 0rem 0.4rem 3rem rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  justify-content: center;
+  text-align: center;
+}
+
+.productos {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.ecommerce {
+  display: flex;
+  justify-content:center
+ 
+}
+
+
+.boton {
+  margin-bottom: 0px;
+  background-color: rgb(245, 235, 235);
+  height: 40px;
+}
+
+img {
+  height: 250px;
+  width: 230px;
+}
+
+.notebook {
+    margin-left: 25px;
+    margin-right: 25px;  
+
+}
+
+.icono_hamburguesa {
+  align-items: center;
+  margin-top: 75px;
+}
+
+.style-numbers {
+  display: flex;
+  justify-content: center;
+  background-color: azure;
+  margin-top: 5em;
+  background-color: white;
+}
+
+.p-button,
+.p-normal,
+.p-special {
+  padding: 0.7em;
+  margin: 0.5em;
+  border-radius: 10px;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+}
+.p-normal {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.p-special {
+  border: 1px solid lightgray;
+}
+.p-button {
+  border: 1px solid lightgray;
+}
+.p-button:active,
+.p-normal:active,
+.p-special:active {
+  background: azure;
+}
+
+
+@media (max-width: 576px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main"
+      "footer";
+  }
+
+  .titulo {
+    display: none;
+  }
+
+  .catalogo {
+    align-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .icono {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 576px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    grid-template-rows: 9rem auto 5rem;
+    grid-template-areas:
+      "header sidebar"
+      "header main"
+      "footer footer";
+  }
+
+  .icono_hamburguesa {
+    display: none;
+  }
+
+  .tarjeta {
+    display: flex;
+  }
+  .tarjeta2 {
+    display: flex;
+  }
+}
